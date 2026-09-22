@@ -70,6 +70,8 @@ h1,h2,h3{font-family:'Bricolage Grotesque', ui-sans-serif, sans-serif; text-wrap
 /* ===== KPI strip ===== */
 .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:28px;}
 .kpis.kpis-3{grid-template-columns:repeat(3,1fr);}
+.kpis.kpis-5{grid-template-columns:repeat(5,1fr);}
+@media (max-width:900px){ .kpis.kpis-5{grid-template-columns:repeat(3,1fr);} }
 .kpi{
   background:var(--surface-2); border:1px solid var(--line); border-radius:10px;
   padding:16px 16px 14px; display:flex; flex-direction:column; gap:4px;
@@ -146,11 +148,14 @@ table.traf th{font-size:0.68rem; text-transform:uppercase; letter-spacing:0.04em
 table.traf td.num, table.traf th.num{text-align:right; font-family:'IBM Plex Mono';}
 table.traf tr:last-child td{border-bottom:none;}
 table.traf tr.total td{font-weight:700; background:var(--surface-3);}
+table.traf td.delta-up{color:var(--warn); font-size:0.72rem;}
+table.traf td.delta-down{color:var(--good); font-size:0.72rem;}
 .imposto-note{
   margin-top:10px; font-size:0.78rem; color:var(--text-soft); display:flex; gap:8px; align-items:flex-start;
   background:var(--warn-bg); color:var(--warn); padding:10px 12px; border-radius:8px;
 }
 .imposto-note b{font-weight:700;}
+.imposto-note.info{background:var(--good-bg); color:var(--good);}
 
 /* ===== WhatsApp block ===== */
 .wa-block{
